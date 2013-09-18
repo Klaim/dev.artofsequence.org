@@ -1,0 +1,117 @@
+# Coding Convention
+
+This is the coding convention used in Art Of Sequence project's code.
+If any file in the code base doesn't follow this convention, feel free to point it to us via comments or by entering an issue.
+
+
+## Use Language Conventions
+
+For any language used that have a language-specific convention, follow it. 
+C++ is the one language that don't have any language-specific convention so it's the most detailed here.
+
+However, if we specify general or language-specific conventions that does against the language-specific convention, use ours. The reason is just consistency and ease of reading while switching between the different languages used in this project.
+
+----
+# General Convention
+
+Those conventions apply to any language and configuration file in this project. 
+
+## Text files
+
+
+**Note:**
+If it's not already done, this will be enforced or checked before integration automatically by repository tools.
+
+## UTF-8
+
+We use UTF-8 encoding for all text-content files.
+
+**Note:** [CMake has a bug that makes it misread CMake files encoded in UTF-8 with BOM](http://public.kitware.com/Bug/view.php?id=11137). For CMake related files, don't use BOM.
+
+## Tabs or Spaces
+
+We use tabs.
+
+----
+
+# Python
+
+Follow the [official Python style guide](http://www.python.org/dev/peps/pep-0008/).
+
+----
+# Javascript
+
+Follow the [Google convention described there](http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml). 
+
+Exception: use lower_case_with_underscore for both functions and object names, UpperCaseCamelCase for functions defining types.
+
+----
+# C++
+## Naming
+
+### Types (Classes, Enums, etc.)
+
+Classes, structs, enums and other constructs that are defined by the language as types or custom-types should have names in **UpperCaseCamelCase**.
+Try to keep the naming in 2 words maximum. If you can't, maybe you need to categorize the type for some reasons. For such cases you're can use underscores '_' to separate category name and specific name. C++ namespaces can be a solution too, but it's really relative to the context, so use the simplest solution.
+
+ * Right : 
+  * `class MyType{};`
+  * `class Behaviour{};`
+  * `class Behaviour_Wander{};`
+  * `class WanderBehaviour{};`
+ * Wrong : 
+  * `class myType{};`
+  * `class _Behaviour{};`
+  * `class Behaviourwander{};`
+  * `class WANDERBEHAVIOUR{};`
+  * `class special_object{};` 
+
+### Constants
+
+We reserve UPPER_CHARACTERS_SEPARATED_BY_UNDERSCORE for constants and macros constants. The only exception being `constexpr` functions that can use the function naming style.
+
+ * Right : 
+  * `#define MATH_PI 3.14`
+  * `#define LABEL_HELLO_WORLD "Hello, World!"`
+  * `static const int MAX_HELLO_WORLDS = 42;`
+  * `constexpr int static_check( int k )  { return k >0; }`
+  
+ * Wrong :
+  * `#define math_PI 3.14`
+  * `#define Label_HelloWorld "Hello, World!"`
+  * `static const int max_hello_world = 42;`
+
+### Functions
+
+Free functions and member functions names (except for constructors and destructors) should be written in **lower_case_with_underscores**. Their parameters should follow objects naming (see further).
+
+There is one exception : free functions that should act like constant/immutable macro can be named in UPPER_CHARACTERS_WITH_UNDERSCORE, but this is not mandatory.
+
+For member functions, **avoid getters and setters**, provide only useful services if possible. 
+If you need to provide information and allow those information to be changed, name your functions intelligently, in a way that suggest the underlying process.
+
+ * Right : 
+  * `void do_something( int value );`
+  * `void very_complex_process();`
+  * `const char* PROJECT_FILE_LOCATION( const char* project_name );`
+  * `int convert( MyObject& object );`
+  * `class Thing{ public: void make_something(); void clear_all(); };`
+  * `class Object{ public: std::string name() const; void rename( std::string new_name ); };`
+
+ * Wrong : 
+  * `void DoSomething( int value );`
+  * `void VeryComplexProcess();`
+  * `const char* PROJECTFILELOCATION( const char* project_name );`
+  * `int Convert( MyObject& object );`
+  * `class Thing{ public: void MakeSomething(); void clearAll(); };`
+  * `class Object{ public: std::string getName() const; void setName( std::string newName ); };`
+
+It is ok to use get_ or set_ as a prefix of member functions that just expose and modify data in an obvious way, but before going there prefer using names describing actions as suggested before. 
+
+### Objects
+
+Objects include any kind of variable of any type, including built-in types.
+
+All objects naming follow the same base of convention: lower_case_with_underscore. 
+
+WORK IN PROGRESS...
