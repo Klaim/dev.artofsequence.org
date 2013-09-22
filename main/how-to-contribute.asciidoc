@@ -57,7 +57,7 @@ You can discuss AOSL's design http://forum.artofsequence.org/category/aosl[on th
 
 Enhancement, fixes and new features propositions are obviously welcome and encouraged. Just provide changesets to check in with a full explanation of your proposition for review.
 
-### Documentation
+### Write Documentation
 
 At the moment, AOSL is really poorly documented. If you start to grasp the point of AOSL, you're encouraged to help on it's documentation, either in the xsd definition documentation tags or by providing tutorials and articles for example.
 
@@ -74,7 +74,7 @@ You can also discuss these documents http://forum.artofsequence.org/category/aos
  * UX and usability designs
  * Graphics : icons and other graphic stuffs
 
-### User Experience
+### Improve User Experience
 
 The project being in it's infancy, the current objective is to make it *just work*.
 
