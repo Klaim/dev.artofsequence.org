@@ -8,7 +8,8 @@ http://artofsequence.org[**Art Of Sequence**] is a **set of open-source technolo
 
 ## Projects
 
-AOS is composed of several projects. Each project solves different kind of issues of digital narratives creation and publication:
+AOS is composed of several projects. Each project solves different kind of issues of digital narratives creation and publication.
+All the projects code are https://github.com/artofsequence[hosted and visible on GitHub] :
 
  * https://github.com/artofsequence/aosl[**AOSL**]: an **universal format** to represent digital stories (it's XML-based) - the common language of all AOS tools;
  * https://github.com/artofsequence/aos-designer[**AOS Designer**]: a **visual editor** to help authors to story-board and mount digital stories, which will host exporters;
