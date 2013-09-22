@@ -107,7 +107,7 @@ Any help on this front would be awesome.
 
 ## Develop Exporters
 
-Exporters are tools that convert a story (an AOSL file) and it's resources (images, sounds, etc.) into another specific form.
+Exporters are tools that convert a story (an AOSL file) and it's resources (images, sounds, etc.) into another format.
 
 The main exporter that will be provided with the tool will be an HTML/CSS/Javascript exporter, generating a folder with an html page, some Javscript and CSS files and a resources directory. This exporter is meant to be the simplest and provide a simple way to put the artist's sequences online, available on any platform with a decent browser.
 
