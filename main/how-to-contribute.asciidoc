@@ -102,9 +102,8 @@ Tutorials could be implemented in several ways :
 
 ### Write Unit Tests
 
-Even in AOSLCPP, there is no unit tests at the moment.
+There is always missing unit tests in our C++ projects at the moment.
 Any help on this front would be awesome.
-
 
 ## Develop Exporters
 
