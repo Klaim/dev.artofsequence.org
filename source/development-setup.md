@@ -62,5 +62,5 @@ At the moment, the main source of code generation is the [AOSL xsd definition fi
 
 ## 4. Contributions
 
- * [Please read the coding standard for the projects before starting implementations.](coding-standard)
- * [There is a non-exhaustive list of fronts that need contributions available there.](how-to-contribute)
+ * [Please read the coding standard for the projects before starting implementations.](coding-standard.md)
+ * [There is a non-exhaustive list of fronts that need contributions available there.](how-to-contribute.md)
