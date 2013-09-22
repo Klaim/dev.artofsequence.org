@@ -5,7 +5,7 @@ Still, it's a very big project, made of several sub-projects that are different 
 
 **Any help is welcome.** Below we describe how you can help on the technical side. If you're an author but don't have technical skills, you can still help by providing feedback and suggestions (see http://artofsequence.org ).
 
-**For developers**, [instructions to setup the developpement environnement are available there](development-setup). A [coding convention is also available](Coding-Standard) : we'll accept only code following this convention. It's a constant work-in-progress so feel free to ask details or propose enhancements to it.
+**For developers**, [instructions to setup the developpement environnement are available there](development-setup.md). A [coding convention is also available](coding-standard.md) : we'll accept only code following this convention. It's a constant work-in-progress so feel free to ask details or propose enhancements to it.
 
 If you want to participate on the technical side of the project, here is a list of war fronts to fight on.
 
