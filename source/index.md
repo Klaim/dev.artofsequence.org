@@ -18,7 +18,10 @@ Here is a diagram showing the core projects and their relationship with the rest
 
 ## Development Information
 
-If you want to help but are not sure how to do so then [please check this page first!](how-to-contribute) If you just want to start coding, check [the development setup page](development-setup). Once done, get the sources of the project you want to work on and start coding!
+If you want to help but are not sure how to start [please check this page first!](how-to-contribute.md)
+
+If you just want to start coding, check [the development setup page](development-setup.md). 
+Once done, get the sources of the project you want to work on and start coding!
 
 ## Community
 
