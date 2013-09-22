@@ -113,7 +113,7 @@ The main exporter that will be provided with the tool will be an HTML/CSS/Javasc
 
 However, this will not be enough. One of the purposes of AOS is to allow defining a Sequence, maybe making some variants, and exporting to several different targets.
 
-There are two kind of targets : 
+There are several kinds of targets/output : 
 
  * Interpreters : see the next section. Some exporters will just allow players to read specific optimized formats.
  * Final form : the web exporter exports the sequence in it's final form, the javascript interepreter will do the work of the player. We could also implement an executable from the Sequence description, for any platform. For example, one could develop an
