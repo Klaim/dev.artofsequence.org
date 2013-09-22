@@ -15,9 +15,9 @@ There are some dependencies required to compile all the projects:
 
  * [Boost >= 1.54.0](http://www.boost.org/) 
  * [Qt 5.x SDK](http://qt.nokia.com/) : should be automatically found by CMake. Used in AOS Designer project for GUI.
- * [CodeSynthesis XSD 3.2.0](http://www.codesynthesis.com/products/xsd/) : Have to be installed on the system. Used in [AOSLCPP](https://github.com/artofsequence/aosl-cpp) project to implement AOSL model in C++.
+ * [CodeSynthesis XSD 3.2.0](http://www.codesynthesis.com/products/xsd/) : Have to be installed on the system. Used in [AOSLCPP](https://github.com/artofsequence/aos-designer/tree/develop/aosl-cpp) project to implement AOSL model in C++.
  * [Python](http://python.org/) : Python have to be available in the environnement. It's used mostly for scripts manipulating files and text, but it could be used for tools implementation too. 
- * [Some other dependencies](https://github.com/artofsequence/aos-all-dependencies) which we provide a version in this repository but you could get them yourself too.
+ * [Some other C++ dependencies](https://github.com/artofsequence/aos-cpp-dependencies) which we provide a version in this repository but you could get them yourself too.
  
 
 ## 2. Projects Generation
@@ -55,12 +55,12 @@ Some projects have code generated from other sources. If you modify those source
 At the moment, the main source of code generation is the [AOSL xsd definition file](http://artofsequence.org/aosl/). It is used to generate most of the AOSLCPP project sources. If you need to modify the language definition proceed through those steps :
 
  * Change the [xsd file](https://github.com/artofsequence/aosl/blob/master/aosl.xsd) to match your language change.
- * [Execute the python script available in the "script" folder](https://github.com/artofsequence/aosl-cpp/blob/master/script/generate_cpp.py) to generate the C++ code equivalent of the xsd definition.
+ * [Execute the python script available in the "script" folder](https://github.com/artofsequence/aos-designer/blob/develop/aosl-cpp/script/generate_cpp.py) to generate the C++ code equivalent of the xsd definition.
  * Compile and fix AOSLCPP and maybe add new library features accordingly to your changes.
  * Compile projects that depends on AOSLCPP like AOS Designer to make sure everything is fine.
 
 
 ## 4. Contributions
 
- * [Please read the coding standard for the projects before starting implementations.](Coding-Standard)
- * [There is a non-exhaustive list of fronts that need contributions available there.](How-To-Contribute)
+ * [Please read the coding standard for the projects before starting implementations.](coding-standard)
+ * [There is a non-exhaustive list of fronts that need contributions available there.](how-to-contribute)
