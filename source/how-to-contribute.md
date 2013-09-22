@@ -5,7 +5,7 @@ Still, it's a very big project, made of several sub-projects that are different 
 
 **Any help is welcome.** Below we describe how you can help on the technical side. If you're an author but don't have technical skills, you can still help by providing feedback and suggestions (see http://artofsequence.org ).
 
-**For developers**, [instructions to setup the developpement environnement are available there](Development-Setup). A [coding convention is also available](Coding-Standard) : we'll accept only code following this convention. It's a constant work-in-progress so feel free to ask details or propose enhancements to it.
+**For developers**, [instructions to setup the developpement environnement are available there](development-setup). A [coding convention is also available](Coding-Standard) : we'll accept only code following this convention. It's a constant work-in-progress so feel free to ask details or propose enhancements to it.
 
 If you want to participate on the technical side of the project, here is a list of war fronts to fight on.
 
@@ -15,12 +15,11 @@ You should first look at the issues lists for each sub-project:
  - [AOSL](https://github.com/artofsequence/aosl/issues)
  - [AOS Designer](https://github.com/artofsequence/aos-designer/issues)
  - [AOS Web Player](https://github.com/artofsequence/aos-webplayer/issues) - take a look at [the demo](http://demo.artofsequence.org)
- - [AOSLCPP](https://github.com/artofsequence/aosl-cpp/issues)
-
+ 
 
 If the issues are bugs or not-working-as-it-should features, feel free to fix them and create pull-requests. (If you're not familiar with Git, our source-control tool, here is a good starting point : http://git-scm.com/book )
 
-**However if the issues imply design decisions, please first discuss the issue** in the comments or in the related discussion on [the forum if necessary](https://groups.google.com/forum/?fromgroups#!forum/aos-dev).
+**However if the issues imply design decisions, please first discuss the issue** in the comments or in the related discussion on [the forum if necessary](http://forum.artofsequence.org).
 
 
 ## Build System Improvements
@@ -49,7 +48,7 @@ As it's a format specification, originally written by one person only, it needs 
 
 ### Design
 
-You can discuss AOSL's design [on the dedicated forum](https://groups.google.com/forum/?fromgroups#!forum/aos-dev) or [enter issues](https://github.com/artofsequence/aosl) for design bugs.
+You can discuss AOSL's design [on the dedicated forum](http://forum.artofsequence.org/category/aosl) or [enter issues](https://github.com/artofsequence/aosl) for design bugs.
 
 Enhancement, fixes and new features propositions are obviously welcome and encouraged. Just provide changesets to check in with a full explanation of your proposition for review.
 
