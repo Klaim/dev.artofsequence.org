@@ -1,54 +1,59 @@
-# Any Help Is Welcome
+# How To Contribute
+A. Joël Lamotte <klaim@artofsequence.org>
+{docdatetime}
+:toc: left
 
-**Art Of Sequence** (or **AOS**) is a volunteer driven project, powered only by love of art, authors and the will to help them.
-Still, it's a very big project, made of several sub-projects that are different tools working together. It's designed to be open. The purpose is to provide a base on which companies and authors could build their own tools. It requires a very wide variety of skills, knowledge and a lot of time to develop.
+## Any Help Is Welcome
 
-**Any help is welcome.** Below we describe how you can help on the technical side. If you're an author but don't have technical skills, you can still help by providing feedback and suggestions (see http://artofsequence.org ).
+**Art Of Sequence** (or **AOS**) is a volunteer driven project, powered only by love of art, love of authors and the will to help them.
+Still, it's a very big project, made of several sub-projects that are different tools working together. 
+It's designed to be open to extension. The purpose is to provide a base on which companies and authors could build their own tools. It requires a very wide variety of skills, knowledge and a lot of time to develop all these tools.
 
-**For developers**, [instructions to setup the developpement environnement are available there](development-setup.md). A [coding convention is also available](coding-standard.md) : we'll accept only code following this convention. It's a constant work-in-progress so feel free to ask details or propose enhancements to it.
+**Any help is welcome.** Below we describe how you can help on the technical side. If you're an author but don't have technical skills, you can still help by providing feedback and suggestions (on the forum http://forum.artofsequence.org ).
+
+**For developers**, <<development-setup#,instructions to setup the developpement environnement are available there>>. A <<coding-standard#,coding convention is also available>> : we'll accept only code following this convention. It's a constant work-in-progress so feel free to ask details or propose enhancements to it.
 
 If you want to participate on the technical side of the project, here is a list of war fronts to fight on.
 
-## Issues
+## Fix Issues
 
 You should first look at the issues lists for each sub-project:
- - [AOSL](https://github.com/artofsequence/aosl/issues)
- - [AOS Designer](https://github.com/artofsequence/aos-designer/issues)
- - [AOS Web Player](https://github.com/artofsequence/aos-webplayer/issues) - take a look at [the demo](http://demo.artofsequence.org)
- 
+
+ - https://github.com/artofsequence/aosl/issues[AOSL]
+ - https://github.com/artofsequence/aos-designer/issues[AOS Designer]
+ - https://github.com/artofsequence/aos-webplayer/issues[AOS Web Player] - take a look at http://demo.artofsequence.org[the demo] to find new issues...
 
 If the issues are bugs or not-working-as-it-should features, feel free to fix them and create pull-requests. (If you're not familiar with Git, our source-control tool, here is a good starting point : http://git-scm.com/book )
 
-**However if the issues imply design decisions, please first discuss the issue** in the comments or in the related discussion on [the forum if necessary](http://forum.artofsequence.org).
+**However if the issues imply design decisions, please first discuss the issue** in the comments or in the related discussion on http://forum.artofsequence.org[the forum if necessary].
 
 
-## Build System Improvements
+## Improve The Build-System Scripts
 
 AOS provide tools and players implementations that are meant to work at least on Windows, MacOSX and Linux (at least Ubuntu & Fedora).
-To achieve this goal for C++ code, **we use [CMake](http://www.cmake.org/)** as meta-build system to generate the project files necessary for each platform and tools sets.
+To achieve this goal for C++ code, **we use http://www.cmake.org/[CMake]** as meta-build system to generate the project files necessary for each platform and tools sets. We also have some Python scripts for post-build actions.
 
-However, we don't have CMake specialists in the team at the moment (core team size = 1...) and the current CMake files might be very naive implementations.
+However, we don't have CMake specialists in the team at the moment and the current CMake files might be very naive implementations.
 
 Any help to enhance CMake files documentation and implementation (flexibility, correctness) are very welcome!
 
-## Cross-Platform Support
+## Improve Cross-Platform Support
 
-**The tools provided by A.O.S. are meant to work on Windows, MacOS and Linux (at least Ubuntu and Fedora).**
+**The tools provided by A.O.S. are meant to work at least on Windows, MacOS and Linux (Ubuntu and Fedora).**
 
-At the moment, while keeping this objective in mind, we develop and check the application mainly on Windows. 
+At the moment, while keeping this objective in mind, we develop and check the application only on Windows. 
 Deep checks of correct behavior of the tools on those platforms are welcome.
 
 Also, the players implementations are meant to be working on more different platforms, specific to the player application nature. Deep checks of provided players implementations behavior on those platforms are welcome too!
 
 ## AOSL
 
-**AOSL is the format that makes the tools and players work together.** It's xml-based and totally defined and documented in [an xsd file](http://artofsequence.org/aosl/) at the moment.
-
+**AOSL is the format that allows the tools and interpreters to work together.** It's xml-based and totally defined and documented in http://artofsequence.org/aosl/[an xsd file] at the moment.
 As it's a format specification, originally written by one person only, it needs a lot of reviews and enhancement for the future versions:
 
 ### Design
 
-You can discuss AOSL's design [on the dedicated forum](http://forum.artofsequence.org/category/aosl) or [enter issues](https://github.com/artofsequence/aosl) for design bugs.
+You can discuss AOSL's design http://forum.artofsequence.org/category/aosl[on the dedicated forum] or [enter issues](https://github.com/artofsequence/aosl/issues) for design bugs.
 
 Enhancement, fixes and new features propositions are obviously welcome and encouraged. Just provide changesets to check in with a full explanation of your proposition for review.
 
@@ -56,15 +61,18 @@ Enhancement, fixes and new features propositions are obviously welcome and encou
 
 At the moment, AOSL is really poorly documented. If you start to grasp the point of AOSL, you're encouraged to help on it's documentation, either in the xsd definition documentation tags or by providing tutorials and articles for example.
 
+There is https://github.com/artofsequence/aosl/tree/feature/AOSL-2.0/docs[a specification document being written for AOSL 2.0 and other related documentation] that are all work-in-progress.
+You can also discuss these documents http://forum.artofsequence.org/category/aosl[on the forum].
 
 ## AOS Designer
 
 **AOS Designer is the main visual edition tool of the project.** We need to add helpful and powerful features to let the author be free to story-board and mount their sequences as they wish and with almost not limits.
 
 **Skills wanted** :
+
  * Programming : C++, Boost, Qt
- * UI and usability designs
- * Graphism : icons and other graphic stuffs
+ * UX and usability designs
+ * Graphics : icons and other graphic stuffs
 
 ### User Experience
 
@@ -79,7 +87,7 @@ You can suggest improvements on the forum or even implement some and propose the
 One thing that might help a lot would be to add usage statistics to the code, to make the tool send use data about how the users behave. That would complete observation of real-world usage that I'm doing with some people around me.
 
 
-### Documentation
+### Write Documentation
 
 AOS Designer really need tutorials and extensive documentation.
 
@@ -87,20 +95,20 @@ A wiki might be a good solution for such documentation (TODO?).
 
 Another type of documentation is everything that is inside the tool itself. For example, tooltips and contextual information pages might help the users to figure what they should or can do at any moment.
 
-Tutorials could be implemented in two ways : 
+Tutorials could be implemented in several ways : 
 
  * Tutorial sequences : sequences explaining how to use the tool and providing their own sources/project files, to help the user understand how to do something. I think it should be the preferred form because it would help "eating our own dog food" and it's a perfect case of explanation by desmonstration.
  * Textual tutorials : classic tutorial texts.
 
-### Unit Tests
+### Write Unit Tests
 
 Even in AOSLCPP, there is no unit tests at the moment.
 Any help on this front would be awesome.
 
 
-## Exporters
+## Develop Exporters
 
-Exporters are tools that convert a sequence definition (an AOSL file) and it's resources (images, sounds, etc.) into another specific form.
+Exporters are tools that convert a story (an AOSL file) and it's resources (images, sounds, etc.) into another specific form.
 
 The main exporter that will be provided with the tool will be an HTML/CSS/Javascript exporter, generating a folder with an html page, some Javscript and CSS files and a resources directory. This exporter is meant to be the simplest and provide a simple way to put the artist's sequences online, available on any platform with a decent browser.
 
@@ -108,15 +116,16 @@ However, this will not be enough. One of the purposes of AOS is to allow definin
 
 There are two kind of targets : 
 
- * Players : see the next section. Some exporters will just allow players to read specific optimized formats.
- * Final form : the web exporter exports the sequence in it's final form, the javascript interepreter will do the work of the player. We could also implement an executable from the Sequence description, for any platform.
+ * Interpreters : see the next section. Some exporters will just allow players to read specific optimized formats.
+ * Final form : the web exporter exports the sequence in it's final form, the javascript interepreter will do the work of the player. We could also implement an executable from the Sequence description, for any platform. For example, one could develop an
+ exporter generating an Android or iOS application, ready to be submitted for publication in the respective store.
 
 
-## Players
+## Develop Interpreters
 
-**Players are interprets of sequences**. There are two kind of players :
+There are two kind of interpreters :
 
- * Players reading AOSL files (and resources) : those are the most flexible players. However they might suffer from performance problems on some platforms like embedded hardware (smartphones for example).
+ * Players reading AOSL files directly : those are the most flexible players. However they might suffer from performance problems on some platforms like embedded hardware (smartphones for example) because they need to parse XML, then interpret it, then gather associated media files before starting to show the story.
  * Players reading specific format : mostly for performance reasons, a binary format for some players might be necessary.
 
 For binary formats, there is no official AOSL binary at the moment because it's meant to be extended: players can implement additional features to the language. When such a player-specific extension is used in a Sequence that is played in a player that don't know this extension, it's just ignored, like with HTML tags. 
@@ -127,10 +136,8 @@ Ideas of players that might be interesting to provide :
  - Android player
  - iOS player
 
-Some of these players are planned as commercial products by Joel Lamotte.
+### Improve The Web Player
 
-### Web Player
-
-The web player is essentially a Javascript AOSL interpreter that allows to play a Sequence in a web page. It's meant to be the default exporter of AOS Designer and will be the demonstration tool of the project.
+The https://github.com/artofsequence/aos-webplayer[web player] is essentially a Javascript AOSL interpreter that allows to play a sequence in a web page. It's meant to be the default exporter of AOS Designer and will be the demonstration tool of the project.
 
 You can see an work-in-progress example there: http://demo.artofsequence.org

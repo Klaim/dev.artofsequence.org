@@ -1,85 +1,85 @@
 # Coding Convention
+A. Joël Lamotte <klaim@artofsequence.org>
+{docdatetime}
+:toc: left
+:toclevels: 4
 
-This is the coding convention used in Art Of Sequence project's code.
-If any file in the code base doesn't follow this convention, feel free to point it to us via comments or by entering an issue.
+This is the coding convention used in http://artofsequence.org[**Art Of Sequence**] project's code.
+If any file in the code base doesn't follow this convention, feel free to point it to us http://forum.artofsequence.org[on the forum] or <<how-to-contribute#_fix_issues,by entering an issue in the appropriate project issue tracker>>.
 
 
-## Use Language Conventions
+## Prefer The Language Convention
 
-For any language used that have a language-specific convention, follow it. 
+For any language used that have a language-specific convention, follow it.
 C++ is the one language that don't have any language-specific convention so it's the most detailed here.
 
 However, if we specify general or language-specific conventions that does against the language-specific convention, use ours. The reason is just consistency and ease of reading while switching between the different languages used in this project.
 
-----
-# General Convention
+## General Convention
 
 Those conventions apply to any language and configuration file in this project. 
 
-## Text files
-
+### Text files
 
 **Note:**
 If it's not already done, this will be enforced or checked before integration automatically by repository tools.
 
-## UTF-8
+### UTF-8
 
 We use UTF-8 encoding for all text-content files.
 
-**Note:** [CMake has a bug that makes it misread CMake files encoded in UTF-8 with BOM](http://public.kitware.com/Bug/view.php?id=11137). For CMake related files, don't use BOM.
+**Note:** http://public.kitware.com/Bug/view.php?id=11137[CMake has a bug that makes it misread CMake files encoded in UTF-8 with BOM]. For CMake related files, don't use BOM.
 
-## Tabs or Spaces
+### Tabs or Spaces
 
-We use tabs.
+We use tabs for indentation, space for alignment.
 
-----
+## Python
 
-# Python
+Follow the http://www.python.org/dev/peps/pep-0008/[official Python style guide].
 
-Follow the [official Python style guide](http://www.python.org/dev/peps/pep-0008/).
+## Javascript
 
-----
-# Javascript
-
-Follow the [Google convention described there](http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml). 
+Follow the http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml[Google convention described there]. 
 
 Exception: use lower_case_with_underscore for both functions and object names, UpperCaseCamelCase for functions defining types.
 
-----
-# C++
-## Naming
+## C++
 
-### Types (Classes, Enums, etc.)
+### Naming
+
+#### Types (Classes, Enums, etc.)
 
 Classes, structs, enums and other constructs that are defined by the language as types or custom-types should have names in **UpperCaseCamelCase**.
 Try to keep the naming in 2 words maximum. If you can't, maybe you need to categorize the type for some reasons. For such cases you're can use underscores '_' to separate category name and specific name. C++ namespaces can be a solution too, but it's really relative to the context, so use the simplest solution.
 
  * Right : 
-  * `class MyType{};`
-  * `class Behaviour{};`
-  * `class Behaviour_Wander{};`
-  * `class WanderBehaviour{};`
+ ** `class MyType{};`
+ ** `class Behaviour{};`
+ ** `class Behaviour_Wander{};`
+ ** `class WanderBehaviour{};`
+ 
  * Wrong : 
-  * `class myType{};`
-  * `class _Behaviour{};`
-  * `class Behaviourwander{};`
-  * `class WANDERBEHAVIOUR{};`
-  * `class special_object{};` 
+ ** `class myType{};`
+ ** `class _Behaviour{};`
+ ** `class Behaviourwander{};`
+ ** `class WANDERBEHAVIOUR{};`
+ ** `class special_object{};` 
 
-### Constants
+#### Constants
 
 We reserve UPPER_CHARACTERS_SEPARATED_BY_UNDERSCORE for constants and macros constants. The only exception being `constexpr` functions that can use the function naming style.
 
  * Right : 
-  * `#define MATH_PI 3.14`
-  * `#define LABEL_HELLO_WORLD "Hello, World!"`
-  * `static const int MAX_HELLO_WORLDS = 42;`
-  * `constexpr int static_check( int k )  { return k >0; }`
+ ** `#define MATH_PI 3.14`
+ ** `#define LABEL_HELLO_WORLD "Hello, World!"`
+ ** `static const int MAX_HELLO_WORLDS = 42;`
+ ** `constexpr int static_check( int k )  { return k >0; }`
   
  * Wrong :
-  * `#define math_PI 3.14`
-  * `#define Label_HelloWorld "Hello, World!"`
-  * `static const int max_hello_world = 42;`
+ ** `#define math_PI 3.14`
+ ** `#define Label_HelloWorld "Hello, World!"`
+ ** `static const int max_hello_world = 42;`
 
 ### Functions
 
@@ -91,24 +91,24 @@ For member functions, **avoid getters and setters**, provide only useful service
 If you need to provide information and allow those information to be changed, name your functions intelligently, in a way that suggest the underlying process.
 
  * Right : 
-  * `void do_something( int value );`
-  * `void very_complex_process();`
-  * `const char* PROJECT_FILE_LOCATION( const char* project_name );`
-  * `int convert( MyObject& object );`
-  * `class Thing{ public: void make_something(); void clear_all(); };`
-  * `class Object{ public: std::string name() const; void rename( std::string new_name ); };`
+ ** `void do_something( int value );`
+ ** `void very_complex_process();`
+ ** `const char* PROJECT_FILE_LOCATION( const char* project_name );`
+ ** `int convert( MyObject& object );`
+ ** `class Thing{ public: void make_something(); void clear_all(); };`
+ ** `class Object{ public: std::string name() const; void rename( std::string new_name ); };`
 
  * Wrong : 
-  * `void DoSomething( int value );`
-  * `void VeryComplexProcess();`
-  * `const char* PROJECTFILELOCATION( const char* project_name );`
-  * `int Convert( MyObject& object );`
-  * `class Thing{ public: void MakeSomething(); void clearAll(); };`
-  * `class Object{ public: std::string getName() const; void setName( std::string newName ); };`
+ ** `void DoSomething( int value );`
+ ** `void VeryComplexProcess();`
+ ** `const char* PROJECTFILELOCATION( const char* project_name );`
+ ** `int Convert( MyObject& object );`
+ ** `class Thing{ public: void MakeSomething(); void clearAll(); };`
+ ** `class Object{ public: std::string getName() const; void setName( std::string newName ); };`
 
 It is ok to use get_ or set_ as a prefix of member functions that just expose and modify data in an obvious way, but before going there prefer using names describing actions as suggested before. 
 
-### Objects
+#### Objects
 
 Objects include any kind of variable of any type, including built-in types.
 

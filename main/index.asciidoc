@@ -1,34 +1,43 @@
 # Art Of Sequence - Development
+A. Joël Lamotte <klaim@artofsequence.org>
+{docdatetime}
+:toc: left
 
-## Welcome to the AOS projects development website!
 
-[**Art Of Sequence**](http://artofsequence.org) is a **set of open-source technologies for digital story-telling**. [By **digital story-telling** we mean any kind of narratives that exploit one or more unique feature of digital platforms](http://artofsequence.org/?page_id=42). 
+http://artofsequence.org[**Art Of Sequence**] is a **set of open-source technologies for digital story-telling**. http://artofsequence.org/?page_id=42[By **digital story-telling** we mean any kind of narratives that exploit one or more unique feature of digital platforms]. 
 
-AOS is composed of several projects which try to solve different issues of digital narratives creation and publication:
- * [AOSL](https://github.com/artofsequence/aosl): an universal format to represent digital stories (it's XML-based) - format on which all our tools and interpreters relies on;
- * [AOS Designer](https://github.com/artofsequence/aos-designer): a visual editor to help authors to story-board and mount digital stories, which will host exporters;
- * [AOS Web Player](https://github.com/artofsequence/aos-webplayer): a Javascript interpreter of AOSL files - there is a demo online: http://demo.artofsequence.org ;
- * and many other projects to come!
+## Projects
 
-Need more information about AOS or maybe the last news about the project? Check the main website: http://artofsequence.org
+AOS is composed of several projects. Each project solves different kind of issues of digital narratives creation and publication:
 
-Here is a diagram showing the core projects and their relationship with the rest of the digital narrative landscape:
+ * https://github.com/artofsequence/aosl[**AOSL**]: an **universal format** to represent digital stories (it's XML-based) - the common language of all AOS tools;
+ * https://github.com/artofsequence/aos-designer[**AOS Designer**]: a **visual editor** to help authors to story-board and mount digital stories, which will host exporters;
+ * https://github.com/artofsequence/aos-webplayer[**AOS Web Player**]: a **Javascript interpreter** of AOSL files - there is a demo online: http://demo.artofsequence.org ;
 
-![AOS Overview](http://artofsequence.org/wp-content/uploads/2011/12/AOS-Overview.png)
+The main website http://artofsequence.org also exposes the goals of these projects. You can also find news and other information there.
 
-## Development Information
+The following diagram shows the main projects and their relationship with the rest of the digital narrative creation landscape:
 
-If you want to help but are not sure how to start [please check this page first!](how-to-contribute.md)
+:image:http://artofsequence.org/wp-content/uploads/2011/12/AOS-Overview.png[AOS Overview]
 
-If you just want to start coding, check [the development setup page](development-setup.md). 
-Once done, get the sources of the project you want to work on and start coding!
+**AOSL is central** as it is the format which allows all the tools to work together.
+As it describe a digital story in an abstract way, it can easily be read by interpreters (like **AOS Web Player**) or
+be converted by some tools to generate story applications and other formats.
+It is also designed to be easy to modify by tools to make
+
+## Development Info
+
+ - <<how-to-contribute#,How To Contribute>>: If you want to help but are not sure how to start, please check this page first.
+ - <<development-setup#, Development Setup>>: If you just want to start coding you will need to setup your development environment as described there.
+ - <<coding-standard#, Coding Standard>>: This is the coding convention used in AOS projects code, so make sure to read it before coding.
+ - https://drive.google.com/folderview?id=0BzZIiiOMgzyvTXBJcVZkY0Rkc1U&usp=sharing[Documents]: some documents used to help understanding how the projects are organized, what are the guidelines, etc. Once these documents are done, they are used into the documentations or the projects themselves.
 
 ## Community
 
-There is a [forum with some development topic categories](http://forum.artofsequence.org). Feel free to post there for feedback, questions, reports and comments. 
+The http://forum.artofsequence.org[forum] have some development-related discussion categories. Feel free to post there for feedback, questions, reports and comments.
 
-## Licensing
+## License
 
-The purpose of these projects is to be **a base on which companies can rely to make better tools, formats and interpreters for digital stories**. Following this objective, **all the base projects have [the MIT license](http://en.wikipedia.org/wiki/MIT_License)**. 
+The purpose of these projects is to be **a base on which companies can rely to make better tools, formats and interpreters for digital stories**. Following this objective, **all the main projects have http://en.wikipedia.org/wiki/MIT_License[the MIT license]**. 
 
-I (Joel Lamotte) plan to do some commercial works in the future that will rely on this MIT code. These commercial projets may or may not be open source, but they will be separated from the base code. **All code exposed in https://github.com/artofsequence/ ** have [MIT license](http://en.wikipedia.org/wiki/MIT_License). If you find missing mentions of licencing, please contact me or create an issue in the appropriate project.
+I (Joel Lamotte) plan to do some commercial works in the future that will rely on this MIT code. These commercial projets may or may not be open source, but they will be separated from the base code. **All code exposed in https://github.com/artofsequence/ ** have http://en.wikipedia.org/wiki/MIT_License[MIT license]. If you find missing mentions of licencing, please contact me or create an issue in the appropriate project.
