@@ -9,9 +9,21 @@ http://artofsequence.org[**Art Of Sequence**] is a **set of open-source technolo
 By **digital story-telling** we mean http://artofsequence.org/?page_id=42[any kind of narratives that exploit one or more unique feature of digital platforms]. 
 
 
+## Development Info
+
+ - https://github.com/artofsequence[**GitHub.com/ArtOfSequence**]: All AOS projects source code is available there.
+ - <<how-to-contribute#,**How To Contribute**>>: If you want to help but are not sure how to start, please check this page first.
+ - <<development-setup#,**Development Setup**>>: If you just want to start coding you will need to setup your development environment as described there.
+ - <<coding-standard#,**Coding Standard**>>: This is the coding convention used in AOS projects code, so make sure to read it before coding.
+ - https://drive.google.com/folderview?id=0BzZIiiOMgzyvTXBJcVZkY0Rkc1U&usp=sharing[**Documents**]: some documents used to help understanding how the projects are organized, what are the guidelines, etc. Once these documents are done, they are used into the documentations or the projects themselves.
+
+## Community
+
+The http://forum.artofsequence.org[**forum**] have some development-related discussion categories. Feel free to post there for feedback, questions, reports and comments.
+
+
 ## Projects
 
-IMPORTANT: https://github.com/artofsequence[**All Art Of Sequence source code is on GitHub.com**]
 
 AOS is composed of several core projects. Each project solves different kind of issues of digital narratives creation and publication :
 
@@ -30,16 +42,6 @@ As it describe a digital story in an abstract way, it can easily be read by inte
 be converted by some tools to generate story applications and other formats.
 It is also designed to be easy to modify by tools to make
 
-## Development Info
-
- - <<how-to-contribute#,How To Contribute>>: If you want to help but are not sure how to start, please check this page first.
- - <<development-setup#, Development Setup>>: If you just want to start coding you will need to setup your development environment as described there.
- - <<coding-standard#, Coding Standard>>: This is the coding convention used in AOS projects code, so make sure to read it before coding.
- - https://drive.google.com/folderview?id=0BzZIiiOMgzyvTXBJcVZkY0Rkc1U&usp=sharing[Documents]: some documents used to help understanding how the projects are organized, what are the guidelines, etc. Once these documents are done, they are used into the documentations or the projects themselves.
-
-## Community
-
-The http://forum.artofsequence.org[forum] have some development-related discussion categories. Feel free to post there for feedback, questions, reports and comments.
 
 ## License
 
