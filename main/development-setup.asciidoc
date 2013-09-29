@@ -17,8 +17,8 @@ You'll read below all the instructions to setup a developpement environnement to
 There are some dependencies required to compile all the projects:
 
  * You'll need to install http://www.cmake.org/[CMake] on your system if not already. We use CMake 2.8 or superior (compatible) version.
- * http://www.boost.org/[Boost >= 1.54.0] 
- * http://qt-project.org/[Qt 5.x SDK] : should be automatically found by CMake. Used in AOS Designer project for GUI.
+ * http://www.boost.org/[Boost >= 1.55.0] 
+ * http://qt-project.org/[Qt 5.1+ SDK] : should be automatically found by CMake. Used in AOS Designer project for GUI.
  * http://www.codesynthesis.com/products/xsd/[CodeSynthesis XSD/Tree 3.2.0] : Have to be installed on the system. Used in https://github.com/artofsequence/aos-designer/tree/develop/aosl-cpp[AOSLCPP] to generate implementation of the AOSL model in C++.
  * http://python.org/[Python] : Python have to be available in the environnement. It's used mostly for scripts manipulating files and text, but it could be used for tools implementation too. 
  * https://github.com/artofsequence/aos-cpp-dependencies[Some other C++ dependencies] which we provide a version in this repository but you could get them yourself too.
@@ -29,9 +29,27 @@ There are some dependencies required to compile all the projects:
 Using CMake you can generate the whole solution of the project for your preferred IDE or compiler. 
 *Note that the main development of the project is made using Visual Studio 2012 with the Qt Visual Addin extension, so other IDE and platform aren't tested yet. Please report any problem with other setup.*
 
-To generate the project files, use CMake in the root directory of the repository. 
-It should find automatically all the dependencies, or ask for them. If you're not used to CMake way of specifying where is what,
+To generate the project files, use CMake in the root directory of the repository. You can use CMake either through command line or it's GUI.
+It should find automatically all other the dependencies, or ask for them. If you're not used to CMake way of specifying where is what,
 http://www.gamedev.net/page/resources/_/technical/general-programming/cross-platform-test-driven-development-environment-using-cmake-part-1-r2986[read this tutorial].
+
+[NOTE]
+====
+As an example, here is the command line I use in the project's root directory to generate the projects on my Visual Studio 2012 for 64bit setup:
+-----
+cmake -G "Visual Studio 11 Win64" -D BOOST_LIBRARYDIR=E:/Projects/SDK/boost/boost/lib/x64 -D Qt5Widgets_DIR=E:/Projects/SDK/Qt/5.1.1/msvc2012_64/lib/cmake/Qt5Widgets ../aos-designer
+-----
+
+In my setup I didn't set BOOST_LIBRARYDIR globally because I have both 64bit and 32bit library files installed, so I need to specify which one to use.
+I also don't have Qt installed globally as suggested in http://qt-project.org/doc/qt-5.1/qtdoc/cmake-manual.html[Qt's documentation]: 
+
+
+  In order for find_package to be successful, Qt 5 must be found below the CMAKE_PREFIX_PATH, or the Qt5<Module>_DIR must be set in the CMake cache to the location of the Qt5WidgetsConfig.cmake file. The easiest way to use CMake is to set the CMAKE_PREFIX_PATH environment variable to the install prefix of Qt 5.
+
+So I need to specify it manually.
+However if you have both variable available in the path, then you don't need to specify them each time.
+====
+
 
 **All the projects binaries will be gathered in the `/Build/<Configuration>/` directory of the project**, but replace `<Configuration>` by the configuration "Debug", "Release" or other configurations.
 
@@ -51,7 +69,7 @@ For debugging, setup the execution directory in the binary directory! CMake will
 
 ## 3. Code Generation
 
-Note: this part will be moved to the AOSLCPP wiki soon.
+NOTE: This part is specific to AOSLCPP.
 
 Some projects have code generated from other sources. If you modify those sources, make sure to generate the code from it, then check that everything still work, maybe make some modifications/fixes, then commit the generated files too. 
 
