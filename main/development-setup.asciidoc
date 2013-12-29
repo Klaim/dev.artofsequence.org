@@ -18,8 +18,8 @@ There are some dependencies required to compile all the projects:
 
  * You'll need to install http://www.cmake.org/[CMake] on your system if not already. We use CMake 2.8 or superior (compatible) version.
  * http://www.boost.org/[Boost >= 1.55.0] 
- * http://qt-project.org/[Qt 5.1+ SDK] : should be automatically found by CMake. Used in AOS Designer project for GUI.
- * http://www.codesynthesis.com/products/xsd/[CodeSynthesis XSD/Tree 3.2.0] : Have to be installed on the system. Used in https://github.com/artofsequence/aos-designer/tree/develop/aosl-cpp[AOSLCPP] to generate implementation of the AOSL model in C++.
+ * http://qt-project.org/[Qt 5.2+ SDK] : should be automatically found by CMake. Used in AOS Designer project for GUI.
+ * http://www.codesynthesis.com/products/xsd/[CodeSynthesis XSD/Tree 3.3.0+] : Have to be installed on the system. Used in https://github.com/artofsequence/aos-designer/tree/develop/aosl-cpp[AOSLCPP] to generate implementation of the AOSL model in C++.
  * http://python.org/[Python] : Python have to be available in the environnement. It's used mostly for scripts manipulating files and text, but it could be used for tools implementation too. 
  * https://github.com/artofsequence/aos-cpp-dependencies[Some other C++ dependencies] which we provide a version in this repository but you could get them yourself too.
  
