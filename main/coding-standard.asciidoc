@@ -32,7 +32,7 @@ We use UTF-8 encoding for all text-content files.
 
 ### Tabs or Spaces
 
-We use tabs for indentation, space for alignment.
+We use 4 spaces for indentation and alignement.
 
 ## Python
 
