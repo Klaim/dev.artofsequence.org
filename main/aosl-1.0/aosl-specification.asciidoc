@@ -1,0 +1,24 @@
+AOSL 1.0 Specification
+=====================
+A. Joël Lamotte <klaim@artofsequence.org>
+v1.0-draft
+:doctype: book
+:toc:
+:numbered:
+:sectanchors:
+:sectlinks:
+:idprefix: section_
+
+include::general.adoc[]
+
+include::dependencies.adoc[]
+
+include::definitions.adoc[]
+
+include::basic-types.adoc[]
+
+
+
+
+
+
