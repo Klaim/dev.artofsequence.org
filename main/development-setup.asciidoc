@@ -2,6 +2,7 @@
 A. Joël Lamotte <klaim@artofsequence.org>
 {docdatetime}
 :toc: left
+:source-highlighter: coderay
 
 You'll read below all the instructions to setup a developpement environnement to build and develop Art Of Sequence  projects, mostly C++ ones. Other projects don't need such setup but installing [Python](http://www.python.org/) for scripts.
 

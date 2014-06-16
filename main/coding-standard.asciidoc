@@ -3,6 +3,7 @@ A. Joël Lamotte <klaim@artofsequence.org>
 {docdatetime}
 :toc: left
 :toclevels: 4
+:source-highlighter: coderay
 
 This is the coding convention used in http://artofsequence.org[**Art Of Sequence**] project's code.
 If any file in the code base doesn't follow this convention, feel free to point it to us http://forum.artofsequence.org[on the forum] or <<how-to-contribute#_fix_issues,by entering an issue in the appropriate project issue tracker>>.
